@@ -457,14 +457,6 @@ Due to GitHub's file size limitations, the following resources are hosted on Goo
    - [ ] Pest Dataset (~500 MB)
    - [ ] Satellite Imagery (~2 GB)
 
-3. **Screenshots** (for README)
-   - [ ] Dashboard screenshot
-   - [ ] Crop Health screenshot
-   - [ ] Pest Detection screenshot
-   - [ ] Multispectral Analysis screenshot
-   - [ ] Community Forum screenshot
-   - [ ] AI Chat Assistant screenshot
-
 ### How to Download
 
 1. **Access Google Drive Link**: [Click here](https://drive.google.com/drive/u/1/folders/1fU4gaFoclK6vXGxmEAG2PFLCLVoYt28X)
