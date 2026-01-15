@@ -1,0 +1,97 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+*.egg-info/
+dist/
+build/
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Large Files & Models
+*.h5
+*.hdf5
+*.pkl
+*.pt
+*.pth
+*.ckpt
+*.pb
+*.onnx
+*.tflite
+*.weights
+
+# Datasets
+datasets/
+*.jpg
+*.jpeg
+*.png
+*.tiff
+*.tif
+*.jp2
+*.SAFE
+*.nc
+*.hdf
+*.h5
+
+# Logs
+*.log
+logs/
+db_debug.log
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# OS
+Thumbs.db
+desktop.ini
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.cache
+
+# Large documentation
+*.pdf
+UI.pdf
+
+# Compiled files
+*.pyc
+*.pyo
+*.pyd
+*.dll
+*.exe
+
+# Models directory (explicit)
+backend/models/
+models/
