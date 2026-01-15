@@ -166,7 +166,7 @@ The system analyzes aerial images from drones or satellites to detect pest infes
    GEMINI_API_KEY=your-gemini-api-key
    ```
 
-5. **Download Models** (See [Google Drive Resources](#-google-drive-resources))
+5. **Download Models** (See [Google Drive Resources](https://drive.google.com/drive/u/1/folders/1fU4gaFoclK6vXGxmEAG2PFLCLVoYt28X))
    - Place model files in `backend/models/`:
      - `crop_model.h5`
      - `pest_model.pt`
@@ -405,7 +405,7 @@ POST /api/community/posts
 - **Pest Dataset**: Annotated pest images
 - **Satellite Data**: Sentinel-2 Level-2A products
 
-> **Note**: Large model files and datasets are hosted on Google Drive. See [Google Drive Resources](#-google-drive-resources) section.
+> **Note**: Large model files and datasets are hosted on Google Drive. See [Google Drive Resources]([#-google-drive-resources](https://drive.google.com/drive/u/1/folders/1fU4gaFoclK6vXGxmEAG2PFLCLVoYt28X)) section.
 
 ---
 
