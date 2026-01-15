@@ -412,7 +412,7 @@ POST /api/community/posts
 ## 📸 Screenshots
 
 ### Dashboard Overview
-![Dashboard](https://via.placeholder.com/800x400?text=Dashboard+Screenshot)
+![Dashboard]([https://via.placeholder.com/800x400?text=Dashboard+Screenshot](https://github.com/rahulrai19/Agri-4.0/blob/main/Screenshot/Screenshot%202025-12-18%20204525.png))
 *Main dashboard showing crop health overview and quick actions*
 
 ### Crop Health Analysis
