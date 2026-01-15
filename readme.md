@@ -416,23 +416,19 @@ POST /api/community/posts
 *Main dashboard showing crop health overview and quick actions*
 
 ### Crop Health Analysis
-![Crop Health](https://via.placeholder.com/800x400?text=Crop+Health+Analysis)
+![Crop Health](https://github.com/rahulrai19/Agri-4.0/blob/main/Screenshot/Screenshot%202025-12-18%20204842.png)
 *Real-time crop disease detection interface*
 
 ### Pest Detection
-![Pest Detection](https://via.placeholder.com/800x400?text=Pest+Detection)
+![Pest Detection](https://github.com/rahulrai19/Agri-4.0/blob/main/Screenshot/Screenshot%202025-12-18%20204855.png)
 *AI-powered pest identification with confidence scores*
 
-### Multispectral Analysis
-![Multispectral](https://via.placeholder.com/800x400?text=Multispectral+Analysis)
-*Satellite imagery processing and NDVI visualization*
-
 ### Community Forum
-![Community](https://via.placeholder.com/800x400?text=Community+Forum)
+![Community](https://github.com/rahulrai19/Agri-4.0/blob/main/Screenshot/Screenshot%202025-12-18%20205950.png)
 *Community platform for farmers to connect and share*
 
 ### AI Chat Assistant
-![Chat Assistant](https://via.placeholder.com/800x400?text=AI+Chat+Assistant)
+![Chat Assistant](https://github.com/rahulrai19/Agri-4.0/blob/main/Screenshot/Screenshot%202025-12-18%20231910.png)
 *AI-powered consultation and farming guidance*
 
 > **Note**: Replace placeholder images with actual screenshots of your application. Upload screenshots to Google Drive and update the links above.
