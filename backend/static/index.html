@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Agri 4.0 - Pest Detector</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Pest Detection</h1>
+      <form id="upload-form">
+        <input type="file" id="file" name="file" accept="image/*" required />
+        <button type="submit">Predict</button>
+      </form>
+      <section id="preview" class="hidden">
+        <h2>Preview</h2>
+        <img id="preview-img" alt="preview" />
+      </section>
+      <section id="result" class="hidden">
+        <h2>Result</h2>
+        <div id="primary"></div>
+        <h3>Top 5</h3>
+        <ol id="topk"></ol>
+      </section>
+      <section id="error" class="hidden"></section>
+    </main>
+    <script>
+      const form = document.getElementById("upload-form");
+      const fileInput = document.getElementById("file");
+      const previewImg = document.getElementById("preview-img");
+      const preview = document.getElementById("preview");
+      const result = document.getElementById("result");
+      const errorBox = document.getElementById("error");
+      const primary = document.getElementById("primary");
+      const topk = document.getElementById("topk");
+
+      function show(node) { node.classList.remove("hidden"); }
+      function hide(node) { node.classList.add("hidden"); }
+      function formatPct(x) { return (x * 100).toFixed(1) + "%"; }
+
+      fileInput.addEventListener("change", () => {
+        const f = fileInput.files?.[0];
+        if (!f) return;
+        const url = URL.createObjectURL(f);
+        previewImg.src = url;
+        show(preview);
+      });
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        hide(errorBox);
+        hide(result);
+        primary.textContent = "Predicting...";
+        show(result);
+        topk.innerHTML = "";
+        try {
+          const f = fileInput.files?.[0];
+          if (!f) throw new Error("Please select an image.");
+          const fd = new FormData();
+          fd.append("file", f, f.name);
+          const resp = await fetch("/predict/pest", { method: "POST", body: fd });
+          if (!resp.ok) {
+            const t = await resp.text();
+            throw new Error(`Request failed: ${resp.status} ${t}`);
+          }
+          const data = await resp.json();
+          const { label, confidence, probabilities, classes } = data;
+          primary.textContent = `${label} (${formatPct(confidence)})`;
+
+          // Build top-5
+          const probs = probabilities.map((p, i) => ({ i, p, c: classes[i] }));
+          probs.sort((a, b) => b.p - a.p);
+          const k = Math.min(5, probs.length);
+          for (let j = 0; j < k; j++) {
+            const li = document.createElement("li");
+            li.textContent = `${probs[j].c} — ${formatPct(probs[j].p)}`;
+            topk.appendChild(li);
+          }
+        } catch (err) {
+          primary.textContent = "";
+          errorBox.textContent = err?.message || String(err);
+          show(errorBox);
+        }
+      });
+    </script>
+  </body>
+  </html>
+
+
