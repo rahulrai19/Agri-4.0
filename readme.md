@@ -165,7 +165,7 @@ The system analyzes aerial images from drones or satellites to detect pest infes
    GROQ_API_KEY=your-groq-api-key
    GEMINI_API_KEY=your-gemini-api-key
    ```
-
+<
 5. **Download Models** (See [Google Drive Resources](https://drive.google.com/drive/u/1/folders/1fU4gaFoclK6vXGxmEAG2PFLCLVoYt28X))
    - Place model files in `backend/models/`:
      - `crop_model.h5`
@@ -445,7 +445,7 @@ POST /api/community/posts
 
 Due to GitHub's file size limitations, the following resources are hosted on Google Drive:
 
-#### 🔗 [Download Models & Datasets](https://drive.google.com/drive/folders/YOUR_FOLDER_ID)
+#### 🔗 [Download Models & Datasets](https://drive.google.com/drive/u/1/folders/1fU4gaFoclK6vXGxmEAG2PFLCLVoYt28X)
 
 **Required Files:**
 
@@ -471,7 +471,7 @@ Due to GitHub's file size limitations, the following resources are hosted on Goo
 
 ### How to Download
 
-1. **Access Google Drive Link**: [Click here](https://drive.google.com/drive/folders/YOUR_FOLDER_ID)
+1. **Access Google Drive Link**: [Click here](https://drive.google.com/drive/u/1/folders/1fU4gaFoclK6vXGxmEAG2PFLCLVoYt28X)
 2. **Download Models**: Extract to `backend/models/` directory
 3. **Download Datasets**: Extract to `datasets/` directory
 4. **Verify File Structure**: Ensure all files are in correct locations
